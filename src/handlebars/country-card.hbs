@@ -1,16 +1,17 @@
 {{#each this}}
+  <div class='card' style='width: 18rem'>
+    <img src={{this.flag}} class='card-img-top' alt={{this.name}} />
+    <div class='card-body text-center'>
+      <h2 class='card-title'>{{this.name}}</h2>
+      <p class='card-text'><span class='fw-bold'>Capital:</span> {{capital}}</p>
+      <p class='card-text'><span class='fw-bold'>Population:</span> {{population}}</p>
 
-  <img src={{this.flag}} class='card-img-top' alt={{this.name}} />
-  <div class='card-body text-center'>
-    <h2 class='card-title'>{{this.name}}</h2>
-    <p class='card-text'><span class='fw-bold'>Capital:</span> {{capital}}</p>
-    <p class='card-text'><span class='fw-bold'>Population:</span> {{population}}</p>
-
-    <h5 class='card-title text-center'>languages</h5>
-    <ul class='list-group d-flex flex-row flex-wrap justify-content-center'>
-      {{#each this.languages}}
-        <li class='list-group-item'>{{name}}</li>
-      {{/each}}
-    </ul>
+      <h5 class='card-title text-center'>languages</h5>
+      <ul class='list-group d-flex flex-row flex-wrap justify-content-center'>
+        {{#each this.languages}}
+          <li class='list-group-item'>{{name}}</li>
+        {{/each}}
+      </ul>
+    </div>
   </div>
 {{/each}}

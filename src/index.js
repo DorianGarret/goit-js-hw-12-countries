@@ -8,13 +8,12 @@ const countryApiService = new CountryApiService();
 
 function onSearch(event) {
   if (!event.target.value) {
+    clear();
     return;
   }
-  refs.cardContainer.innerHTML = '';
-
+  clear();
   countryApiService.country = event.target.value.trim();
   countryApiService.fetchCountry().then(renderCountryCard);
-  refs.cardContainer.classList.remove('visually-hidden');
 }
 
 function renderCountryCard(country) {
@@ -22,3 +21,7 @@ function renderCountryCard(country) {
 }
 
 refs.inputSearch.addEventListener('input', debounce(onSearch, 500));
+
+function clear() {
+  refs.cardContainer.innerHTML = '';
+}
