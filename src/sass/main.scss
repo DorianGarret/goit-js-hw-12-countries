@@ -1,7 +1,16 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+.form-control {
+    border: 2px solid var(--bs-gray-600);
+}
+.card-img-top {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.list-group-item {
+    border: none;
+}
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+.card-title {
+    margin-bottom: 1rem;
+}
+.list-group-item {
+    padding: 0.5rem 0.5rem;
+}
