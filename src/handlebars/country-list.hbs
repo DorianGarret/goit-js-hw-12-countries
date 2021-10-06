@@ -1,0 +1,10 @@
+<ul class='list-group'>
+  {{#each this}}
+    <li class='list-group-item d-flex align-items-center'><img
+        src={{this.flags.svg}}
+        class='img-fluid'
+        style='max-width: 2rem; margin-right: 10px;'
+        alt={{name}}
+      /><p class='list-text'>{{name}}</p></li>
+  {{/each}}
+</ul>
