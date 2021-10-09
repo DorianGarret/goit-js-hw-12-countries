@@ -23,8 +23,13 @@ function onSearch(event) {
 }
 
 function renderCountryCard(country) {
+  if (country.status === 404) {
+    notify.ERROR('No country has been found. Please enter a more specific query!');
+    clear();
+    return;
+  }
   if (country.length > 10) {
-    notify.ERROR('Too many matches found. Please enter a more specific query!');
+    notify.SUCCESS('Too many matches found. Please enter a more specific query!');
     clear();
     return;
   }
